@@ -45,7 +45,14 @@ class BookstoreTestCase(unittest.TestCase):
 
         results = store.search_books(title='ficc')
         self.assertEqual(results, [self.ficciones])
-
+        '''
+        results = []
+        store.books = [ficciones, aleph]
+        books[1] = ficciones
+        if 'ficc' in books[1].title.lower():
+            results.append(books[1])
+        return results
+        '''
         results = store.search_books(title='The')
         self.assertEqual(results, [self.aleph])
 
